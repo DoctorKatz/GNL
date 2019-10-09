@@ -3,4 +3,5 @@ project(GNL C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(GNL main.c Src/get_next_line.c Inc/get_next_line..h)
+add_executable(GNL main.c Src/get_next_line.c Inc/get_next_line.h)
+include_directories (Inc)
