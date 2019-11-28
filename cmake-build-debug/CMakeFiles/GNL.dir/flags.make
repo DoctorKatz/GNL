@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/lgunship/Desktop/CLion_Work_Dir/GNL/Inc 
+C_INCLUDES = -I/Users/lgunship/Desktop/CLion_Work_Dir/GNL/Inc, -I/Users/lgunship/Desktop/CLion_Work_Dir/GNL/libft 
 
