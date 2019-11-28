@@ -6,7 +6,7 @@
 /*   By: lgunship <lgunship@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 21:54:01 by lgunship          #+#    #+#             */
-/*   Updated: 2019/10/10 00:00:03 by lgunship         ###   ########.fr       */
+/*   Updated: 2019/11/28 21:03:09 by lgunship         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,32 @@ int		get_next_line(const int fd, char **line)
 		return (-1);
 	else if (read_bytes == 0 && (str[fd] == NULL || str[fd][0] == '\0'))
 		return (0);
+	return (check_line(fd, line, str, read_bytes));
 }
 
-int check_line(const int fd, char **line, char **str, ssize_t read_bytes)
+int		check_line(const int fd, char **line, char **str, ssize_t read_bytes)
 {
 	int length;
+	char *temp;
 
 	length = 0;
 	while((str[fd][length] != '\n') && (str[fd][length] != '\0'))
 		length++;
 	if(str[fd][length] == '\n')
 	{
-
+		*line = ft_strsub(str[fd], 0, length);
+		temp = ft_strdup(str[fd] + length + 1);
+		free(str[fd]);
+		str[fd] = temp;
+		if (str[fd] == '\0')
+			ft_strdel(&str[fd]);
+		else if (str[fd][length] == '\0')
+		{
+			if (read_bytes == BUFF_SIZE)
+				return (get_next_line(fd, line));
+			*line = ft_strdup(str[fd]);
+			ft_strdel(&str[fd]);
+		}
 	}
-	if (str[fd][length] == '\0')
+	return (1);
 }
