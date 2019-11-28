@@ -6,7 +6,7 @@
 /*   By: lgunship <lgunship@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 21:54:11 by lgunship          #+#    #+#             */
-/*   Updated: 2019/11/28 20:43:15 by lgunship         ###   ########.fr       */
+/*   Updated: 2019/11/28 20:44:58 by lgunship         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define GNL_GET_NEXT_LINE_H
 
 #include <fcntl.h>
-#include "libft.h"
+#include "../libft/libft.h"
 #include <unistd.h>
 
 #define BUFF_SIZE	64

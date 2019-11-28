@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/lgunship/Desktop/CLion_Work_Dir/GNL/Inc/get_next_line.h
+fcntl.h
+-
+../libft/libft.h
+/Users/lgunship/Desktop/CLion_Work_Dir/GNL/libft/libft.h
+unistd.h
+-
+
+/Users/lgunship/Desktop/CLion_Work_Dir/GNL/Src/get_next_line.c
+../Inc/get_next_line.h
+/Users/lgunship/Desktop/CLion_Work_Dir/GNL/Inc/get_next_line.h
+
+/Users/lgunship/Desktop/CLion_Work_Dir/GNL/libft/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+
